@@ -1,7 +1,6 @@
-import java.util.Arrays;
 public class MapReduce 
 {
-    
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args)
     {
         List <string> inputList = Arrays.asList{
@@ -10,8 +9,8 @@ public class MapReduce
         "Bus","Car","CAR","CAR","BUS","Train"
     };
     
-    Map<String, Long> wordCount=inputList.parallelStram().collect(Collectors.groupbyConcurrent(w -> w,Collectors.counting()));
-    wordCount.forEach((<any> word,<any> count)-> System.out.println(count+word+":"));
+    Map<String, Long> wordCount=inputList.parallelStram().collect(Collectors.groupByConcurrent(w -> w,Collectors.counting()));
+    wordCount.forEach((word,count)-> System.out.println(count+word+":"));
     }
     
 }
